@@ -1,0 +1,262 @@
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Profile - Sigma Shop
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Farro&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Farro', Helvetica, sans-serif;
+      background-color: #121212;
+    }
+  </style>
+ </head>
+ <body class="flex flex-col min-h-screen text-white">
+  <!-- Navigation Bar -->
+  <nav class="bg-black sticky top-0 z-50 shadow">
+   <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+     <a class="text-2xl font-bold tracking-wide" href="home.html">
+      Sigma Shop
+      <sup class="text-xs align-top">
+       ™
+      </sup>
+     </a>
+     <div class="lg:hidden">
+      <button aria-label="Toggle navigation" class="focus:outline-none" id="nav-toggle">
+       <i class="fas fa-bars text-white text-2xl"></i>
+      </button>
+     </div>
+     <ul class="hidden lg:flex space-x-8 text-lg font-semibold" id="nav-menu">
+      <li>
+       <a class="hover:text-gray-300 transition" href="home.html#banner">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-300 transition" href="home.html#shop">
+        Shop
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-300 transition" href="teams.html">
+        Teams
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-300 transition" href="news.html">
+        News
+       </a>
+      </li>
+     </ul>
+     <div class="hidden lg:flex space-x-6 text-xl">
+      <a aria-label="Profile" class="hover:text-gray-300 transition" href="profile-page.html">
+       <i class="fas fa-user"></i>
+      </a>
+      <a aria-label="Cart" class="hover:text-gray-300 transition" href="cart.html">
+       <i class="fas fa-shopping-cart"></i>
+      </a>
+     </div>
+    </div>
+    <!-- Mobile Menu -->
+    <ul class="lg:hidden hidden flex-col space-y-4 pb-4 border-b border-gray-700 mt-2" id="nav-menu-mobile">
+     <li>
+      <a class="block px-2 py-1 hover:text-gray-300 transition" href="home.html#banner">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="block px-2 py-1 hover:text-gray-300 transition" href="home.html#shop">
+       Shop
+      </a>
+     </li>
+     <li>
+      <a class="block px-2 py-1 hover:text-gray-300 transition" href="teams.html">
+       Teams
+      </a>
+     </li>
+     <li>
+      <a class="block px-2 py-1 hover:text-gray-300 transition" href="news.html">
+       News
+      </a>
+     </li>
+     <li class="flex space-x-6 px-2">
+      <a aria-label="Profile" class="hover:text-gray-300 transition" href="profile-page.html">
+       <i class="fas fa-user"></i>
+      </a>
+      <a aria-label="Cart" class="hover:text-gray-300 transition" href="cart.html">
+       <i class="fas fa-shopping-cart"></i>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+   <h1 class="text-4xl font-extrabold mb-10 text-white text-center">
+    Your Profile
+   </h1>
+   <section class="bg-gray-900 rounded-lg shadow-lg p-8 max-w-3xl mx-auto mb-6">
+    <div class="flex flex-col items-center space-y-6">
+     <img alt="Profile picture of a young adult male with short hair wearing a black hoodie, smiling and looking at the camera, with a neutral gray background" class="w-32 h-32 rounded-full object-cover border-4 border-red-600" height="128" src="https://storage.googleapis.com/a1aa/image/972dc537-2986-454c-4086-e95288655377.jpg" width="128"/>
+     <h2 class="text-2xl font-semibold text-white">
+      John Doe
+     </h2>
+     <p class="text-gray-400">
+      johndoe@example.com
+     </p>
+     <p class="text-gray-400">
+      +60 12-345 6789
+     </p>
+     <p class="text-gray-400 text-center max-w-md">
+      123 Sigma Street, Kuala Lumpur, Malaysia
+     </p>
+    </div>
+   </section>
+   <div class="max-w-3xl mx-auto mb-12">
+    <button id="logoutBtn" class="w-full bg-red-600 hover:bg-red-700 transition text-white font-semibold py-3 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+     <i class="fas fa-sign-out-alt mr-2"></i> Logout
+    </button>
+   </div>
+   <section class="bg-gray-900 rounded-lg shadow-lg p-8 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6 text-white text-center">
+     Your Orders
+    </h2>
+    <div class="overflow-x-auto">
+     <table class="w-full text-left border-collapse">
+      <thead>
+       <tr class="border-b border-gray-700">
+        <th class="py-3 px-4 text-gray-300 font-semibold">
+         Product
+        </th>
+        <th class="py-3 px-4 text-gray-300 font-semibold">
+         Price
+        </th>
+        <th class="py-3 px-4 text-gray-300 font-semibold">
+         Quantity
+        </th>
+        <th class="py-3 px-4 text-gray-300 font-semibold">
+         Total
+        </th>
+        <th class="py-3 px-4 text-gray-300 font-semibold">
+         Order Date
+        </th>
+        <th class="py-3 px-4 text-gray-300 font-semibold">
+         Status
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr class="border-b border-gray-700">
+        <td class="py-4 px-4 flex items-center space-x-4">
+         <img alt="Black oversized streetwear hoodie with front pocket and hood on a plain background" class="w-20 h-20 object-cover rounded" height="80" src="https://storage.googleapis.com/a1aa/image/656a565b-27be-472a-3158-0f6b7b11b46b.jpg" width="80"/>
+         <div>
+          <h3 class="text-white font-semibold text-lg">
+           Oversized Hoodie
+          </h3>
+         </div>
+        </td>
+        <td class="py-4 px-4 text-white font-semibold">
+         RM65.00
+        </td>
+        <td class="py-4 px-4 text-white font-semibold">
+         2
+        </td>
+        <td class="py-4 px-4 text-white font-semibold">
+         RM130.00
+        </td>
+        <td class="py-4 px-4 text-gray-400">
+         2024-05-10
+        </td>
+        <td class="py-4 px-4">
+         <span class="inline-block bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+          Delivered
+         </span>
+        </td>
+       </tr>
+       <tr class="border-b border-gray-700">
+        <td class="py-4 px-4 flex items-center space-x-4">
+         <img alt="Black streetwear cargo pants with multiple pockets and relaxed fit on a plain background" class="w-20 h-20 object-cover rounded" height="80" src="https://storage.googleapis.com/a1aa/image/1d00eab0-6645-44e3-ffc1-9956e76944af.jpg" width="80"/>
+         <div>
+          <h3 class="text-white font-semibold text-lg">
+           Cargo Pants
+          </h3>
+         </div>
+        </td>
+        <td class="py-4 px-4 text-white font-semibold">
+         RM55.00
+        </td>
+        <td class="py-4 px-4 text-white font-semibold">
+         1
+        </td>
+        <td class="py-4 px-4 text-white font-semibold">
+         RM55.00
+        </td>
+        <td class="py-4 px-4 text-gray-400">
+         2024-05-15
+        </td>
+        <td class="py-4 px-4">
+         <span class="inline-block bg-yellow-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+          Processing
+         </span>
+        </td>
+       </tr>
+       <tr class="border-b border-gray-700">
+        <td class="py-4 px-4 flex items-center space-x-4">
+         <img alt="Black and white graphic streetwear t-shirt with bold print on a plain background" class="w-20 h-20 object-cover rounded" height="80" src="https://storage.googleapis.com/a1aa/image/204e95b0-3772-4428-4a8c-5042606fe98f.jpg" width="80"/>
+         <div>
+          <h3 class="text-white font-semibold text-lg">
+           Graphic T-Shirt
+          </h3>
+         </div>
+        </td>
+        <td class="py-4 px-4 text-white font-semibold">
+         RM30.00
+        </td>
+        <td class="py-4 px-4 text-white font-semibold">
+         3
+        </td>
+        <td class="py-4 px-4 text-white font-semibold">
+         RM90.00
+        </td>
+        <td class="py-4 px-4 text-gray-400">
+         2024-05-20
+        </td>
+        <td class="py-4 px-4">
+         <span class="inline-block bg-red-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+          Cancelled
+         </span>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gray-900 text-center py-6 mt-auto">
+   <p class="text-sm sm:text-base text-gray-400">
+    © 2025 Sigma Shop. All rights reserved.
+   </p>
+  </footer>
+  <script>
+   const navToggle = document.getElementById('nav-toggle');
+   const navMenuMobile = document.getElementById('nav-menu-mobile');
+
+   navToggle.addEventListener('click', () => {
+     navMenuMobile.classList.toggle('hidden');
+   });
+
+   // Logout button functionality
+   const logoutBtn = document.getElementById('logoutBtn');
+   logoutBtn.addEventListener('click', () => {
+     // Clear user session or token here if applicable
+     // For demo, just redirect to home page
+     alert('You have been logged out.');
+     window.location.href = 'index.html';
+   });
+  </script>
+ </body>
+</html>
