@@ -1,78 +1,125 @@
 <html class="scroll-smooth" lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>Login - Sigma Shop</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Farro&display=swap" rel="stylesheet" />
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    body {
-      font-family: 'Farro', Helvetica, sans-serif;
-      background-color: #121212;
-    }
-  </style>
-</head>
-<body class="flex flex-col min-h-screen text-white">
-  <main class="flex-grow flex items-center justify-center px-4 py-20">
-    <section class="w-full max-w-md bg-gray-900 rounded-lg shadow-lg p-8">
-      <h1 class="text-3xl font-semibold text-white mb-8 text-center">Login to Sigma Shop</h1>
-      <form novalidate>
-        <div class="mb-6">
-          <label for="email" class="block text-gray-300 mb-2 font-semibold">Email Address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="you@example.com"
-            class="w-full rounded border border-gray-700 bg-gray-800 text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-white"
-          />
-        </div>
-        <div class="mb-6">
-          <label for="password" class="block text-gray-300 mb-2 font-semibold">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            placeholder="••••••••"
-            class="w-full rounded border border-gray-700 bg-gray-800 text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-white"
-          />
-        </div>
-        <button
-          onclick="location.href='home.html'"
-          type="submit"
-          class="w-full bg-white text-black font-semibold py-3 rounded shadow transition hover:bg-gray-200"
-        >
-          Log In
-        </button>
-      </form>
-      <p class="text-gray-400 text-center mt-6">
-        Don't have an account?
-        <a href="register.html" class="text-white font-semibold hover:underline">Register here</a>
-      </p>
-    </section>
-  </main>
-
-  <footer class="bg-gray-900 text-center py-6 mt-auto">
-    <p class="text-sm sm:text-base">© 2025 Sigma Shop. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Login - Sigma Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Farro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Farro", Helvetica, sans-serif;
+        background-color: #121212;
       }
-      alert('Login successful!');
-      // Add login logic here or redirect
-    });
-  </script>
-</body>
+    </style>
+  </head>
+  <body class="flex flex-col min-h-screen text-white">
+    <main class="flex-grow flex items-center justify-center px-4 py-20">
+      <section class="w-full max-w-md bg-gray-900 rounded-lg shadow-lg p-8">
+        <h1 class="text-3xl font-semibold text-white mb-8 text-center">
+          Login to Sigma Shop
+        </h1>
+        <form novalidate>
+          <div class="mb-6">
+            <label for="email" class="block text-gray-300 mb-2 font-semibold"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@example.com"
+              class="w-full rounded border border-gray-700 bg-gray-800 text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-white"
+            />
+          </div>
+          <div class="mb-6">
+            <label for="password" class="block text-gray-300 mb-2 font-semibold"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="••••••••"
+              class="w-full rounded border border-gray-700 bg-gray-800 text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-white"
+            />
+          </div>
+          <div class="flex flex-col space-y-4">
+            <button
+              onclick="location.href='home.html'"
+              type="submit"
+              id="userLoginBtn"
+              class="w-full bg-white text-black font-semibold py-3 rounded shadow transition hover:bg-gray-200"
+            >
+              Login as User
+            </button>
+            <button
+              onclick="location.href='manage-products.html'"
+              type="submit"
+              id="adminLoginBtn"
+              class="w-full bg-blue-700 text-white font-semibold py-3 rounded shadow transition hover:bg-blue-800"
+            >
+              Login as Admin
+            </button>
+          </div>
+        </form>
+        <p class="text-gray-400 text-center mt-6">
+          Don't have an account?
+          <a
+            href="register.html"
+            class="text-white font-semibold hover:underline"
+            >Register here</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 text-center py-6 mt-auto">
+      <p class="text-sm sm:text-base">
+        © 2025 Sigma Shop. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const form = document.querySelector("form");
+      const userLoginBtn = document.getElementById("userLoginBtn");
+      const adminLoginBtn = document.getElementById("adminLoginBtn");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+      });
+
+      userLoginBtn.addEventListener("click", () => {
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        alert("User login successful!");
+        // Add user login logic here or redirect
+        // location.href = 'user-home.html';
+      });
+
+      adminLoginBtn.addEventListener("click", () => {
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        alert("Admin login successful!");
+        // Add admin login logic here or redirect
+        // location.href = 'admin-dashboard.html';
+      });
+    </script>
+  </body>
 </html>

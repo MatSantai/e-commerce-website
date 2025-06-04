@@ -2,16 +2,17 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>Order Confirmation - Sigma Shop</title>
+    <title>Sigma Shop - Item Detail</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Farro&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Farro&display=swap"
       rel="stylesheet"
     />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
     />
+    <link href="Gallery/favicon.ico" rel="icon" type="image/x-icon" />
     <style>
       body {
         font-family: "Farro", Helvetica, sans-serif;
@@ -135,42 +136,92 @@
         </ul>
       </div>
     </nav>
-    <main
-      class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col items-center text-center"
-    >
-      <img
-        alt="Green checkmark icon symbolizing order confirmation on a white background"
-        class="mx-auto mb-8 w-36 h-36"
-        height="150"
-        src="https://storage.googleapis.com/a1aa/image/ffee04be-a66b-4fbf-f4ea-f52c2893a7bd.jpg"
-        width="150"
-      />
-      <h1 class="text-4xl font-bold text-white mb-4">
-        Thank You for Your Purchase!
-      </h1>
-      <p class="text-gray-300 text-lg mb-6 max-w-xl">
-        Your order has been successfully placed and is being processed. You will
-        receive an email confirmation shortly with the details of your purchase.
-      </p>
-      <a
-        class="inline-flex items-center space-x-2 bg-white text-black font-semibold px-6 py-3 rounded shadow hover:bg-gray-200 transition"
-        href="home.html"
-      >
-        <i class="fas fa-home"> </i>
-        <span> Return to Home </span>
-      </a>
+
+    <!-- Item Detail Section -->
+    <main class="flex-grow container mx-auto px-4 max-w-5xl py-12">
+      <div class="flex flex-col md:flex-row md:space-x-12">
+        <div class="md:flex-1">
+          <img
+            alt="Johor Angels Jersey displayed on a mannequin with vibrant red and white colors, sporty design, and team logo prominently visible"
+            class="w-full rounded-lg shadow-lg"
+            height="600"
+            src="https://storage.googleapis.com/a1aa/image/062300bb-c8e1-4186-097c-bda4d7ddb6d8.jpg"
+            width="600"
+          />
+        </div>
+        <div class="md:flex-1 mt-8 md:mt-0 flex flex-col justify-between">
+          <div>
+            <h1 class="text-4xl font-extrabold mb-4">Johor Angels Jersey</h1>
+            <p class="text-2xl font-bold text-blue-500 mb-6">RM189.00</p>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Experience the spirit of the Johor Angels with this vibrant red
+              and white jersey. Designed for comfort and style, it features the
+              team logo prominently on the chest and is perfect for fans and
+              athletes alike.
+            </p>
+            <ul class="mb-6 space-y-2 text-gray-300">
+              <li>
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>100%
+                breathable polyester fabric
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>Official
+                team colors and logo
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>Available
+                in sizes S to XXL
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>Machine
+                washable
+              </li>
+            </ul>
+          </div>
+          <button
+            aria-label="Add Johor Angels Jersey to cart"
+            class="bg-blue-500 hover:bg-red-700 transition text-white font-semibold py-3 rounded-lg shadow-lg flex items-center justify-center space-x-3"
+            id="add-to-cart-btn"
+          >
+            <i class="fas fa-cart-plus text-xl"></i>
+            <span class="text-lg">Add to Cart</span>
+          </button>
+        </div>
+      </div>
     </main>
+
+    <!-- Footer -->
     <footer class="bg-gray-900 text-center py-6 mt-auto">
       <p class="text-sm sm:text-base">
         © 2025 Sigma Shop. All rights reserved.
       </p>
     </footer>
+
     <script>
       const navToggle = document.getElementById("nav-toggle");
       const navMenuMobile = document.getElementById("nav-menu-mobile");
 
       navToggle.addEventListener("click", () => {
         navMenuMobile.classList.toggle("hidden");
+      });
+
+      // Add to Cart button click handler
+      const addToCartBtn = document.getElementById("add-to-cart-btn");
+      addToCartBtn.addEventListener("click", () => {
+        // Redirect to cart page with item details in query params (simulate adding to cart)
+        // In real app, this would be handled by backend or state management
+        const item = {
+          id: "johor-angels-jersey",
+          name: "Johor Angels Jersey",
+          price: 189.0,
+          image:
+            "https://storage.googleapis.com/a1aa/image/062300bb-c8e1-4186-097c-bda4d7ddb6d8.jpg",
+          description:
+            "Experience the spirit of the Johor Angels with this vibrant red and white jersey. Designed for comfort and style, it features the team logo prominently on the chest and is perfect for fans and athletes alike.",
+        };
+        // Store item in localStorage for cart page usage
+        localStorage.setItem("cartItem", JSON.stringify(item));
+        window.location.href = "cart.html";
       });
     </script>
   </body>

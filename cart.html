@@ -1,294 +1,355 @@
 <html class="scroll-smooth" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Shopping Cart - Sigma Shop
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Farro&amp;display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
-      font-family: 'Farro', Helvetica, sans-serif;
-      background-color: #121212;
-    }
-  </style>
- </head>
- <body class="flex flex-col min-h-screen text-white">
-  <!-- Navigation Bar -->
-  <nav class="bg-black sticky top-0 z-50 shadow">
-   <div class="container mx-auto px-4">
-    <div class="flex items-center justify-between h-16">
-     <a class="text-2xl font-bold tracking-wide" href="home.html">
-      Sigma Shop
-      <sup class="text-xs align-top">
-       ™
-      </sup>
-     </a>
-     <div class="lg:hidden">
-      <button aria-label="Toggle navigation" class="focus:outline-none" id="nav-toggle">
-       <i class="fas fa-bars text-white text-2xl">
-       </i>
-      </button>
-     </div>
-     <ul class="hidden lg:flex space-x-8 text-lg font-semibold" id="nav-menu">
-      <li>
-       <a class="hover:text-gray-300 transition" href="home.html#banner">
-        Home
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-gray-300 transition" href="home.html#shop">
-        Shop
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-gray-300 transition" href="teams.html">
-        Teams
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-gray-300 transition" href="news.html">
-        News
-       </a>
-      </li>
-     </ul>
-     <div class="hidden lg:flex space-x-6 text-xl">
-      <a aria-label="Profile" class="hover:text-gray-300 transition" href="profile.html">
-       <i class="fas fa-user">
-       </i>
-      </a>
-      <a aria-label="Cart" class="hover:text-gray-300 transition" href="cart.html">
-       <i class="fas fa-shopping-cart">
-       </i>
-      </a>
-     </div>
-    </div>
-    <!-- Mobile Menu -->
-    <ul class="lg:hidden hidden flex-col space-y-4 pb-4 border-b border-gray-700 mt-2" id="nav-menu-mobile">
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="home.html#banner">
-       Home
-      </a>
-     </li>
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="home.html#shop">
-       Shop
-      </a>
-     </li>
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="teams.html">
-       Teams
-      </a>
-     </li>
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="news.html">
-       News
-      </a>
-     </li>
-     <li class="flex space-x-6 px-2">
-      <a aria-label="Profile" class="hover:text-gray-300 transition" href="profile.html">
-       <i class="fas fa-user">
-       </i>
-      </a>
-      <a aria-label="Cart" class="hover:text-gray-300 transition" href="cart.html">
-       <i class="fas fa-shopping-cart">
-       </i>
-      </a>
-     </li>
-    </ul>
-   </div>
-  </nav>
-  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-   <h1 class="text-3xl font-semibold text-white mb-8">
-    Your Shopping Cart
-   </h1>
-   <div class="flex flex-col lg:flex-row gap-10">
-    <!-- Cart Items -->
-    <section class="flex-grow bg-gray-900 rounded-lg shadow-lg p-6">
-     <div class="overflow-x-auto">
-      <table class="w-full text-left border-collapse">
-       <thead>
-        <tr class="border-b border-gray-700">
-         <th class="py-3 px-4 text-gray-300 font-semibold">
-          Product
-         </th>
-         <th class="py-3 px-4 text-gray-300 font-semibold">
-          Price
-         </th>
-         <th class="py-3 px-4 text-gray-300 font-semibold">
-          Quantity
-         </th>
-         <th class="py-3 px-4 text-gray-300 font-semibold">
-          Total
-         </th>
-         <th class="py-3 px-4 text-gray-300 font-semibold">
-          Remove
-         </th>
-        </tr>
-       </thead>
-       <tbody>
-        <tr class="border-b border-gray-700">
-         <td class="py-4 px-4 flex items-center space-x-4">
-          <img alt="Black oversized streetwear hoodie with front pocket and hood on a plain background" class="w-20 h-20 object-cover rounded" height="80" src="https://storage.googleapis.com/a1aa/image/656a565b-27be-472a-3158-0f6b7b11b46b.jpg" width="80"/>
-          <div>
-           <h3 class="text-white font-semibold text-lg">
-            Oversized Hoodie
-           </h3>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Shopping Cart - Sigma Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Farro&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Farro", Helvetica, sans-serif;
+        background-color: #121212;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col min-h-screen text-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-black sticky top-0 z-50 shadow">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <a class="text-2xl font-bold tracking-wide" href="home.html">
+            Sigma Shop
+            <sup class="text-xs align-top"> ™ </sup>
+          </a>
+          <div class="lg:hidden">
+            <button
+              aria-label="Toggle navigation"
+              class="focus:outline-none"
+              id="nav-toggle"
+            >
+              <i class="fas fa-bars text-white text-2xl"> </i>
+            </button>
           </div>
-         </td>
-         <td class="py-4 px-4 text-white font-semibold">
-          RM65.00
-         </td>
-         <td class="py-4 px-4">
-          <div class="flex items-center space-x-2 max-w-[120px]">
-           <button aria-label="Decrease quantity of Oversized Hoodie" class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition">
-            <i class="fas fa-minus text-gray-300">
-            </i>
-           </button>
-           <input class="w-12 text-center bg-gray-900 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-white" min="1" type="number" value="2"/>
-           <button aria-label="Increase quantity of Oversized Hoodie" class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition">
-            <i class="fas fa-plus text-gray-300">
-            </i>
-           </button>
+          <ul
+            class="hidden lg:flex space-x-8 text-lg font-semibold"
+            id="nav-menu"
+          >
+            <li>
+              <a class="hover:text-gray-300 transition" href="home.html#banner">
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-300 transition" href="home.html#shop">
+                Shop
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-300 transition" href="teams.html">
+                Teams
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-300 transition" href="news.html">
+                News
+              </a>
+            </li>
+          </ul>
+          <div class="hidden lg:flex space-x-6 text-xl">
+            <a
+              aria-label="Profile"
+              class="hover:text-gray-300 transition"
+              href="profile.html"
+            >
+              <i class="fas fa-user"> </i>
+            </a>
+            <a
+              aria-label="Cart"
+              class="hover:text-gray-300 transition"
+              href="cart.html"
+            >
+              <i class="fas fa-shopping-cart"> </i>
+            </a>
           </div>
-         </td>
-         <td class="py-4 px-4 text-white font-semibold">
-          RM130.00
-         </td>
-         <td class="py-4 px-4">
-          <button aria-label="Remove Oversized Hoodie from cart" class="text-red-600 hover:text-red-800 transition">
-           <i class="fas fa-trash-alt text-lg">
-           </i>
+        </div>
+        <!-- Mobile Menu -->
+        <ul
+          class="lg:hidden hidden flex-col space-y-4 pb-4 border-b border-gray-700 mt-2"
+          id="nav-menu-mobile"
+        >
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="home.html#banner"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="home.html#shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="teams.html"
+            >
+              Teams
+            </a>
+          </li>
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="news.html"
+            >
+              News
+            </a>
+          </li>
+          <li class="flex space-x-6 px-2">
+            <a
+              aria-label="Profile"
+              class="hover:text-gray-300 transition"
+              href="profile.html"
+            >
+              <i class="fas fa-user"> </i>
+            </a>
+            <a
+              aria-label="Cart"
+              class="hover:text-gray-300 transition"
+              href="cart.html"
+            >
+              <i class="fas fa-shopping-cart"> </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <h1 class="text-3xl font-semibold text-white mb-8">Your Shopping Cart</h1>
+      <div class="flex flex-col lg:flex-row gap-10">
+        <!-- Cart Items -->
+        <section class="flex-grow bg-gray-900 rounded-lg shadow-lg p-6">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-gray-700">
+                  <th class="py-3 px-4 text-gray-300 font-semibold">Product</th>
+                  <th class="py-3 px-4 text-gray-300 font-semibold">Price</th>
+                  <th class="py-3 px-4 text-gray-300 font-semibold">
+                    Quantity
+                  </th>
+                  <th class="py-3 px-4 text-gray-300 font-semibold">Total</th>
+                  <th class="py-3 px-4 text-gray-300 font-semibold">Remove</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-700">
+                  <td class="py-4 px-4 flex items-center space-x-4">
+                    <img
+                      alt="Black oversized streetwear hoodie with front pocket and hood on a plain background"
+                      class="w-20 h-20 object-cover rounded"
+                      height="80"
+                      src="https://storage.googleapis.com/a1aa/image/656a565b-27be-472a-3158-0f6b7b11b46b.jpg"
+                      width="80"
+                    />
+                    <div>
+                      <h3 class="text-white font-semibold text-lg">
+                        Oversized Hoodie
+                      </h3>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-white font-semibold">RM65.00</td>
+                  <td class="py-4 px-4">
+                    <div class="flex items-center space-x-2 max-w-[120px]">
+                      <button
+                        aria-label="Decrease quantity of Oversized Hoodie"
+                        class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition"
+                      >
+                        <i class="fas fa-minus text-gray-300"> </i>
+                      </button>
+                      <input
+                        class="w-12 text-center bg-gray-900 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-white"
+                        min="1"
+                        type="number"
+                        value="2"
+                      />
+                      <button
+                        aria-label="Increase quantity of Oversized Hoodie"
+                        class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition"
+                      >
+                        <i class="fas fa-plus text-gray-300"> </i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-white font-semibold">RM130.00</td>
+                  <td class="py-4 px-4">
+                    <button
+                      aria-label="Remove Oversized Hoodie from cart"
+                      class="text-red-600 hover:text-red-800 transition"
+                    >
+                      <i class="fas fa-trash-alt text-lg"> </i>
+                    </button>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="py-4 px-4 flex items-center space-x-4">
+                    <img
+                      alt="Black streetwear cargo pants with multiple pockets and relaxed fit on a plain background"
+                      class="w-20 h-20 object-cover rounded"
+                      height="80"
+                      src="https://storage.googleapis.com/a1aa/image/1d00eab0-6645-44e3-ffc1-9956e76944af.jpg"
+                      width="80"
+                    />
+                    <div>
+                      <h3 class="text-white font-semibold text-lg">
+                        Cargo Pants
+                      </h3>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-white font-semibold">RM55.00</td>
+                  <td class="py-4 px-4">
+                    <div class="flex items-center space-x-2 max-w-[120px]">
+                      <button
+                        aria-label="Decrease quantity of Cargo Pants"
+                        class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition"
+                      >
+                        <i class="fas fa-minus text-gray-300"> </i>
+                      </button>
+                      <input
+                        class="w-12 text-center bg-gray-900 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-white"
+                        min="1"
+                        type="number"
+                        value="1"
+                      />
+                      <button
+                        aria-label="Increase quantity of Cargo Pants"
+                        class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition"
+                      >
+                        <i class="fas fa-plus text-gray-300"> </i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-white font-semibold">RM55.00</td>
+                  <td class="py-4 px-4">
+                    <button
+                      aria-label="Remove Cargo Pants from cart"
+                      class="text-red-600 hover:text-red-800 transition"
+                    >
+                      <i class="fas fa-trash-alt text-lg"> </i>
+                    </button>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                  <td class="py-4 px-4 flex items-center space-x-4">
+                    <img
+                      alt="Black and white graphic streetwear t-shirt with bold print on a plain background"
+                      class="w-20 h-20 object-cover rounded"
+                      height="80"
+                      src="https://storage.googleapis.com/a1aa/image/204e95b0-3772-4428-4a8c-5042606fe98f.jpg"
+                      width="80"
+                    />
+                    <div>
+                      <h3 class="text-white font-semibold text-lg">
+                        Graphic T-Shirt
+                      </h3>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-white font-semibold">RM30.00</td>
+                  <td class="py-4 px-4">
+                    <div class="flex items-center space-x-2 max-w-[120px]">
+                      <button
+                        aria-label="Decrease quantity of Graphic T-Shirt"
+                        class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition"
+                      >
+                        <i class="fas fa-minus text-gray-300"> </i>
+                      </button>
+                      <input
+                        class="w-12 text-center bg-gray-900 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-white"
+                        min="1"
+                        type="number"
+                        value="3"
+                      />
+                      <button
+                        aria-label="Increase quantity of Graphic T-Shirt"
+                        class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition"
+                      >
+                        <i class="fas fa-plus text-gray-300"> </i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="py-4 px-4 text-white font-semibold">RM90.00</td>
+                  <td class="py-4 px-4">
+                    <button
+                      aria-label="Remove Graphic T-Shirt from cart"
+                      class="text-red-600 hover:text-red-800 transition"
+                    >
+                      <i class="fas fa-trash-alt text-lg"> </i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <!-- Order Summary -->
+        <aside
+          class="w-full lg:w-96 bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col"
+        >
+          <h2 class="text-2xl font-semibold text-white mb-6">Order Summary</h2>
+          <div class="flex justify-between text-gray-300 mb-3">
+            <span> Subtotal </span>
+            <span> RM275.00 </span>
+          </div>
+          <div class="flex justify-between text-gray-300 mb-3">
+            <span> Shipping </span>
+            <span> RM10.00 </span>
+          </div>
+          <div
+            class="flex justify-between text-white font-semibold text-lg border-t border-gray-700 pt-3 mb-6"
+          >
+            <span> Total </span>
+            <span> RM285.00 </span>
+          </div>
+          <button
+            onclick="location.href='checkout.html'"
+            class="w-full bg-white text-black font-semibold py-3 rounded shadow transition hover:bg-gray-200"
+            type="button"
+          >
+            Proceed to Checkout
           </button>
-         </td>
-        </tr>
-        <tr class="border-b border-gray-700">
-         <td class="py-4 px-4 flex items-center space-x-4">
-          <img alt="Black streetwear cargo pants with multiple pockets and relaxed fit on a plain background" class="w-20 h-20 object-cover rounded" height="80" src="https://storage.googleapis.com/a1aa/image/1d00eab0-6645-44e3-ffc1-9956e76944af.jpg" width="80"/>
-          <div>
-           <h3 class="text-white font-semibold text-lg">
-            Cargo Pants
-           </h3>
-          </div>
-         </td>
-         <td class="py-4 px-4 text-white font-semibold">
-          RM55.00
-         </td>
-         <td class="py-4 px-4">
-          <div class="flex items-center space-x-2 max-w-[120px]">
-           <button aria-label="Decrease quantity of Cargo Pants" class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition">
-            <i class="fas fa-minus text-gray-300">
-            </i>
-           </button>
-           <input class="w-12 text-center bg-gray-900 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-white" min="1" type="number" value="1"/>
-           <button aria-label="Increase quantity of Cargo Pants" class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition">
-            <i class="fas fa-plus text-gray-300">
-            </i>
-           </button>
-          </div>
-         </td>
-         <td class="py-4 px-4 text-white font-semibold">
-          RM55.00
-         </td>
-         <td class="py-4 px-4">
-          <button aria-label="Remove Cargo Pants from cart" class="text-red-600 hover:text-red-800 transition">
-           <i class="fas fa-trash-alt text-lg">
-           </i>
+          <button
+            onclick="location.href='home.html#shop'"
+            class="mt-4 w-full border border-white text-white font-semibold py-3 rounded hover:bg-gray-800 transition"
+            type="button"
+          >
+            Continue Shopping
           </button>
-         </td>
-        </tr>
-        <tr class="border-b border-gray-700">
-         <td class="py-4 px-4 flex items-center space-x-4">
-          <img alt="Black and white graphic streetwear t-shirt with bold print on a plain background" class="w-20 h-20 object-cover rounded" height="80" src="https://storage.googleapis.com/a1aa/image/204e95b0-3772-4428-4a8c-5042606fe98f.jpg" width="80"/>
-          <div>
-           <h3 class="text-white font-semibold text-lg">
-            Graphic T-Shirt
-           </h3>
-          </div>
-         </td>
-         <td class="py-4 px-4 text-white font-semibold">
-          RM30.00
-         </td>
-         <td class="py-4 px-4">
-          <div class="flex items-center space-x-2 max-w-[120px]">
-           <button aria-label="Decrease quantity of Graphic T-Shirt" class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition">
-            <i class="fas fa-minus text-gray-300">
-            </i>
-           </button>
-           <input class="w-12 text-center bg-gray-900 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-white" min="1" type="number" value="3"/>
-           <button aria-label="Increase quantity of Graphic T-Shirt" class="px-2 py-1 bg-gray-800 rounded hover:bg-gray-700 transition">
-            <i class="fas fa-plus text-gray-300">
-            </i>
-           </button>
-          </div>
-         </td>
-         <td class="py-4 px-4 text-white font-semibold">
-          RM90.00
-         </td>
-         <td class="py-4 px-4">
-          <button aria-label="Remove Graphic T-Shirt from cart" class="text-red-600 hover:text-red-800 transition">
-           <i class="fas fa-trash-alt text-lg">
-           </i>
-          </button>
-         </td>
-        </tr>
-       </tbody>
-      </table>
-     </div>
-    </section>
-    <!-- Order Summary -->
-    <aside class="w-full lg:w-96 bg-gray-900 rounded-lg shadow-lg p-6 flex flex-col">
-     <h2 class="text-2xl font-semibold text-white mb-6">
-      Order Summary
-     </h2>
-     <div class="flex justify-between text-gray-300 mb-3">
-      <span>
-       Subtotal
-      </span>
-      <span>
-       RM275.00
-      </span>
-     </div>
-     <div class="flex justify-between text-gray-300 mb-3">
-      <span>
-       Shipping
-      </span>
-      <span>
-       RM10.00
-      </span>
-     </div>
-     <div class="flex justify-between text-white font-semibold text-lg border-t border-gray-700 pt-3 mb-6">
-      <span>
-       Total
-      </span>
-      <span>
-       RM285.00
-      </span>
-     </div>
-     <button onclick="location.href='checkout.html'" class="w-full bg-white text-black font-semibold py-3 rounded shadow transition hover:bg-gray-200" type="button">
-      Proceed to Checkout
-     </button>
-     <button onclick="location.href='home.html#shop'" class="mt-4 w-full border border-white text-white font-semibold py-3 rounded hover:bg-gray-800 transition" type="button">
-      Continue Shopping
-     </button>
-    </aside>
-   </div>
-  </main>
-  <footer class="bg-gray-900 text-center py-6 mt-auto">
-   <p class="text-sm sm:text-base">
-    © 2025 Sigma Shop. All rights reserved.
-   </p>
-  </footer>
-  <script>
-   const navToggle = document.getElementById('nav-toggle');
-   const navMenuMobile = document.getElementById('nav-menu-mobile');
+        </aside>
+      </div>
+    </main>
+    <footer class="bg-gray-900 text-center py-6 mt-auto">
+      <p class="text-sm sm:text-base">
+        © 2025 Sigma Shop. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenuMobile = document.getElementById("nav-menu-mobile");
 
-   navToggle.addEventListener('click', () => {
-     navMenuMobile.classList.toggle('hidden');
-   });
-  </script>
- </body>
+      navToggle.addEventListener("click", () => {
+        navMenuMobile.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>

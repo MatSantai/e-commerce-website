@@ -1,296 +1,442 @@
 <html class="scroll-smooth" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Sigma Shop - News
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Farro&amp;display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="Gallery/favicon.ico" rel="icon" type="image/x-icon"/>
-  <style>
-   body {
-      font-family: 'Farro', Helvetica, sans-serif;
-      background-color: #121212;
-    }
-  </style>
- </head>
- <body class="flex flex-col min-h-screen text-white">
-  <!-- Navigation Bar -->
-  <nav class="bg-black sticky top-0 z-50 shadow">
-   <div class="container mx-auto px-4">
-    <div class="flex items-center justify-between h-16">
-     <a class="text-2xl font-bold tracking-wide" href="home.html">
-      Sigma Shop
-      <sup class="text-xs align-top">
-       ™
-      </sup>
-     </a>
-     <div class="lg:hidden">
-      <button aria-label="Toggle navigation" class="focus:outline-none" id="nav-toggle">
-       <i class="fas fa-bars text-white text-2xl">
-       </i>
-      </button>
-     </div>
-     <ul class="hidden lg:flex space-x-8 text-lg font-semibold" id="nav-menu">
-      <li>
-       <a class="hover:text-gray-300 transition" href="home.html#banner">
-        Home
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-gray-300 transition" href="home.html#shop">
-        Shop
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-gray-300 transition" href="teams.html">
-        Teams
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-gray-300 transition" href="news.html">
-        News
-       </a>
-      </li>
-     </ul>
-     <div class="hidden lg:flex space-x-6 text-xl">
-      <a aria-label="Profile" class="hover:text-gray-300 transition" href="profile.html">
-       <i class="fas fa-user">
-       </i>
-      </a>
-      <a aria-label="Cart" class="hover:text-gray-300 transition" href="cart.html">
-       <i class="fas fa-shopping-cart">
-       </i>
-      </a>
-     </div>
-    </div>
-    <!-- Mobile Menu -->
-    <ul class="lg:hidden hidden flex-col space-y-4 pb-4 border-b border-gray-700 mt-2" id="nav-menu-mobile">
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="home.html#banner">
-       Home
-      </a>
-     </li>
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="home.html#shop">
-       Shop
-      </a>
-     </li>
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="teams.html">
-       Teams
-      </a>
-     </li>
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="news.html">
-       News
-      </a>
-     </li>
-     <li class="flex space-x-6 px-2">
-      <a aria-label="Profile" class="hover:text-gray-300 transition" href="profile.html">
-       <i class="fas fa-user">
-       </i>
-      </a>
-      <a aria-label="Cart" class="hover:text-gray-300 transition" href="cart.html">
-       <i class="fas fa-shopping-cart">
-       </i>
-      </a>
-     </li>
-    </ul>
-   </div>
-  </nav>
-  <!-- News Page Banner -->
-  <section class="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden bg-black">
-   <img alt="A modern newsroom with multiple screens displaying Sigma Shop news and updates, journalists working with laptops and cameras, vibrant and dynamic atmosphere" class="absolute inset-0 w-full h-full object-cover object-center brightness-50" height="1080" src="https://storage.googleapis.com/a1aa/image/e197482c-780c-4b2d-79b9-dc68135861b5.jpg" width="1920"/>
-   <div class="relative z-10 text-center px-4">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-tight">
-     Latest News
-    </h1>
-    <p class="mt-4 text-lg sm:text-xl font-semibold tracking-wide">
-     Stay updated with Sigma Shop's newest stories and announcements
-    </p>
-   </div>
-  </section>
-  <!-- News Articles Section -->
-  <section class="py-12 flex-grow bg-black">
-   <div class="container mx-auto px-4 max-w-7xl">
-    <h2 class="text-center text-3xl sm:text-4xl font-extrabold mb-12">
-     News &amp; Updates
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Models showcasing vibrant green and black eco-friendly sportswear in a natural outdoor setting with trees and sunlight" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/6ee13ce7-8621-4b99-0c18-d2b7549ebc55.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Sigma Shop Launches Eco-Friendly Sportswear Line
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Sigma Shop proudly introduces its new sustainable collection made from recycled materials, combining style and environmental responsibility.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2025-04-10">
-        April 10, 2025
-       </time>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Sigma Shop - News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Farro&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="Gallery/favicon.ico" rel="icon" type="image/x-icon" />
+    <style>
+      body {
+        font-family: "Farro", Helvetica, sans-serif;
+        background-color: #121212;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col min-h-screen text-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-black sticky top-0 z-50 shadow">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <a class="text-2xl font-bold tracking-wide" href="home.html">
+            Sigma Shop
+            <sup class="text-xs align-top"> ™ </sup>
+          </a>
+          <div class="lg:hidden">
+            <button
+              aria-label="Toggle navigation"
+              class="focus:outline-none"
+              id="nav-toggle"
+            >
+              <i class="fas fa-bars text-white text-2xl"> </i>
+            </button>
+          </div>
+          <ul
+            class="hidden lg:flex space-x-8 text-lg font-semibold"
+            id="nav-menu"
+          >
+            <li>
+              <a class="hover:text-gray-300 transition" href="home.html#banner">
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-300 transition" href="home.html#shop">
+                Shop
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-300 transition" href="teams.html">
+                Teams
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-300 transition" href="news.html">
+                News
+              </a>
+            </li>
+          </ul>
+          <div class="hidden lg:flex space-x-6 text-xl">
+            <a
+              aria-label="Profile"
+              class="hover:text-gray-300 transition"
+              href="profile.html"
+            >
+              <i class="fas fa-user"> </i>
+            </a>
+            <a
+              aria-label="Cart"
+              class="hover:text-gray-300 transition"
+              href="cart.html"
+            >
+              <i class="fas fa-shopping-cart"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <ul
+          class="lg:hidden hidden flex-col space-y-4 pb-4 border-b border-gray-700 mt-2"
+          id="nav-menu-mobile"
+        >
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="home.html#banner"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="home.html#shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="teams.html"
+            >
+              Teams
+            </a>
+          </li>
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="news.html"
+            >
+              News
+            </a>
+          </li>
+          <li class="flex space-x-6 px-2">
+            <a
+              aria-label="Profile"
+              class="hover:text-gray-300 transition"
+              href="profile.html"
+            >
+              <i class="fas fa-user"> </i>
+            </a>
+            <a
+              aria-label="Cart"
+              class="hover:text-gray-300 transition"
+              href="cart.html"
+            >
+              <i class="fas fa-shopping-cart"> </i>
+            </a>
+          </li>
+        </ul>
       </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Excited fans cheering in a packed indoor basketball stadium with bright lights and banners" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/f8a2d2db-d373-4997-a3d8-b41656f3e352.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Sigma Shop Sponsors National Basketball Tournament
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Bringing the community together, Sigma Shop is proud to sponsor the upcoming national basketball tournament featuring top teams from across the country.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2025-03-28">
-        March 28, 2025
-       </time>
+    </nav>
+    <!-- News Page Banner -->
+    <section
+      class="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden bg-black"
+    >
+      <img
+        alt="A modern newsroom with multiple screens displaying Sigma Shop news and updates, journalists working with laptops and cameras, vibrant and dynamic atmosphere"
+        class="absolute inset-0 w-full h-full object-cover object-center brightness-50"
+        height="1080"
+        src="https://storage.googleapis.com/a1aa/image/e197482c-780c-4b2d-79b9-dc68135861b5.jpg"
+        width="1920"
+      />
+      <div class="relative z-10 text-center px-4">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-tight"
+        >
+          Latest News
+        </h1>
+        <p class="mt-4 text-lg sm:text-xl font-semibold tracking-wide">
+          Stay updated with Sigma Shop's newest stories and announcements
+        </p>
       </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Design team working on new apparel sketches and fabric samples in a bright modern studio with laptops and materials" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/375697f1-2f9a-40f7-7a80-88b7d11e3b31.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Inside Sigma Shop: Meet the Design Team
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Get an exclusive look at the creative minds behind Sigma Shop's innovative apparel, from concept to final product.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2025-03-15">
-        March 15, 2025
-       </time>
+    </section>
+    <!-- News Articles Section -->
+    <section class="py-12 flex-grow bg-black">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-center text-3xl sm:text-4xl font-extrabold mb-12">
+          News &amp; Updates
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Models showcasing vibrant green and black eco-friendly sportswear in a natural outdoor setting with trees and sunlight"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/6ee13ce7-8621-4b99-0c18-d2b7549ebc55.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Sigma Shop Launches Eco-Friendly Sportswear Line
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Sigma Shop proudly introduces its new sustainable collection
+                made from recycled materials, combining style and environmental
+                responsibility.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2025-04-10">
+                April 10, 2025
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Excited fans cheering in a packed indoor basketball stadium with bright lights and banners"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/f8a2d2db-d373-4997-a3d8-b41656f3e352.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Sigma Shop Sponsors National Basketball Tournament
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Bringing the community together, Sigma Shop is proud to sponsor
+                the upcoming national basketball tournament featuring top teams
+                from across the country.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2025-03-28">
+                March 28, 2025
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Design team working on new apparel sketches and fabric samples in a bright modern studio with laptops and materials"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/375697f1-2f9a-40f7-7a80-88b7d11e3b31.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Inside Sigma Shop: Meet the Design Team
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Get an exclusive look at the creative minds behind Sigma Shop's
+                innovative apparel, from concept to final product.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2025-03-15">
+                March 15, 2025
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Runners wearing Sigma Shop branded shirts smiling and crossing the finish line in a sunny park during a charity run event"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/4667cc3e-59db-41fe-ee44-d77170494b19.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Sigma Shop Charity Run Raises Funds for Local Communities
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Hundreds participated in Sigma Shop's annual charity run,
+                supporting local causes and promoting healthy lifestyles.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2025-02-20">
+                February 20, 2025
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Ribbon cutting ceremony at Sigma Shop's new flagship store opening with staff and customers celebrating"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/1fe59bbd-9ec6-4c81-3d18-926beda3b5de.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Grand Opening of Sigma Shop's New Flagship Store
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Sigma Shop expands its presence with a new flagship store
+                featuring exclusive products and immersive shopping experiences.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2025-01-30">
+                January 30, 2025
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Sigma Shop athlete signing autographs for fans at a meet and greet event inside a stylish store"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/b4a4fd0a-e2bf-4be7-5de2-10282b063208.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Meet &amp; Greet with Sigma Shop Sponsored Athletes
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Fans had the chance to meet their favorite athletes sponsored by
+                Sigma Shop, with autograph signings and photo opportunities.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2025-01-10">
+                January 10, 2025
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Models wearing cozy sportswear from Sigma Shop's winter collection with snowy mountain backdrop"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/edff1ef9-198d-4dc4-e7f1-c7227e8c72b6.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Winter Collection Launch: Stay Warm in Style
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Discover Sigma Shop's latest winter collection designed for
+                comfort and performance in cold weather.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2024-12-05">
+                December 5, 2024
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Kids playing soccer in branded Sigma Shop kits during a school partnership event promoting youth sports"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/461c01f7-fa31-4d92-ef7f-c9655c7b80cd.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Sigma Shop Partners with Schools to Promote Youth Sports
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Supporting the next generation, Sigma Shop collaborates with
+                local schools to encourage sports participation and healthy
+                lifestyles.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2024-11-15">
+                November 15, 2024
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Behind the scenes of Sigma Shop's latest campaign photo shoot with models in action poses wearing stylish apparel"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/7f648a11-f70f-4362-1fd0-23d05f9227ab.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Behind the Scenes: New Campaign Photo Shoot
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Take a look behind the scenes of Sigma Shop's latest campaign
+                photo shoot featuring dynamic and stylish apparel.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2024-10-30">
+                October 30, 2024
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Volunteers wearing Sigma Shop branded shirts picking up trash in a park during a community clean-up event"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/6a823007-b76a-4747-5824-a23b81d8f360.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Community Clean-Up Event: Sigma Shop Gives Back
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Sigma Shop employees and customers joined forces to clean local
+                parks, demonstrating commitment to community and environment.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2024-10-10">
+                October 10, 2024
+              </time>
+            </div>
+          </article>
+          <article
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              alt="Limited edition Sigma Shop collaboration sneakers displayed on a sleek black pedestal with dramatic lighting"
+              class="w-full h-56 object-cover"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/db741bfa-6c31-455c-7068-f27b71906e5a.jpg"
+              width="600"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">
+                Limited Edition Sneakers Collaboration Released
+              </h3>
+              <p class="text-gray-300 flex-grow">
+                Sigma Shop teams up with a renowned designer to release
+                exclusive limited edition sneakers, available now.
+              </p>
+              <time class="mt-4 text-sm text-gray-400" datetime="2024-09-25">
+                September 25, 2024
+              </time>
+            </div>
+          </article>
+        </div>
       </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Runners wearing Sigma Shop branded shirts smiling and crossing the finish line in a sunny park during a charity run event" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/4667cc3e-59db-41fe-ee44-d77170494b19.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Sigma Shop Charity Run Raises Funds for Local Communities
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Hundreds participated in Sigma Shop's annual charity run, supporting local causes and promoting healthy lifestyles.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2025-02-20">
-        February 20, 2025
-       </time>
-      </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Ribbon cutting ceremony at Sigma Shop's new flagship store opening with staff and customers celebrating" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/1fe59bbd-9ec6-4c81-3d18-926beda3b5de.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Grand Opening of Sigma Shop's New Flagship Store
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Sigma Shop expands its presence with a new flagship store featuring exclusive products and immersive shopping experiences.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2025-01-30">
-        January 30, 2025
-       </time>
-      </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Sigma Shop athlete signing autographs for fans at a meet and greet event inside a stylish store" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/b4a4fd0a-e2bf-4be7-5de2-10282b063208.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Meet &amp; Greet with Sigma Shop Sponsored Athletes
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Fans had the chance to meet their favorite athletes sponsored by Sigma Shop, with autograph signings and photo opportunities.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2025-01-10">
-        January 10, 2025
-       </time>
-      </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Models wearing cozy sportswear from Sigma Shop's winter collection with snowy mountain backdrop" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/edff1ef9-198d-4dc4-e7f1-c7227e8c72b6.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Winter Collection Launch: Stay Warm in Style
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Discover Sigma Shop's latest winter collection designed for comfort and performance in cold weather.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2024-12-05">
-        December 5, 2024
-       </time>
-      </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Kids playing soccer in branded Sigma Shop kits during a school partnership event promoting youth sports" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/461c01f7-fa31-4d92-ef7f-c9655c7b80cd.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Sigma Shop Partners with Schools to Promote Youth Sports
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Supporting the next generation, Sigma Shop collaborates with local schools to encourage sports participation and healthy lifestyles.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2024-11-15">
-        November 15, 2024
-       </time>
-      </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Behind the scenes of Sigma Shop's latest campaign photo shoot with models in action poses wearing stylish apparel" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/7f648a11-f70f-4362-1fd0-23d05f9227ab.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Behind the Scenes: New Campaign Photo Shoot
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Take a look behind the scenes of Sigma Shop's latest campaign photo shoot featuring dynamic and stylish apparel.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2024-10-30">
-        October 30, 2024
-       </time>
-      </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Volunteers wearing Sigma Shop branded shirts picking up trash in a park during a community clean-up event" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/6a823007-b76a-4747-5824-a23b81d8f360.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Community Clean-Up Event: Sigma Shop Gives Back
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Sigma Shop employees and customers joined forces to clean local parks, demonstrating commitment to community and environment.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2024-10-10">
-        October 10, 2024
-       </time>
-      </div>
-     </article>
-     <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg flex flex-col">
-      <img alt="Limited edition Sigma Shop collaboration sneakers displayed on a sleek black pedestal with dramatic lighting" class="w-full h-56 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/db741bfa-6c31-455c-7068-f27b71906e5a.jpg" width="600"/>
-      <div class="p-6 flex flex-col flex-grow">
-       <h3 class="text-xl font-semibold mb-2">
-        Limited Edition Sneakers Collaboration Released
-       </h3>
-       <p class="text-gray-300 flex-grow">
-        Sigma Shop teams up with a renowned designer to release exclusive limited edition sneakers, available now.
-       </p>
-       <time class="mt-4 text-sm text-gray-400" datetime="2024-09-25">
-        September 25, 2024
-       </time>
-      </div>
-     </article>
-    </div>
-   </div>
-  </section>
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-center py-6 mt-auto">
-   <p class="text-sm sm:text-base">
-    © 2025 Sigma Shop. All rights reserved.
-   </p>
-  </footer>
-  <script>
-   const navToggle = document.getElementById('nav-toggle');
-    const navMenuMobile = document.getElementById('nav-menu-mobile');
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-center py-6 mt-auto">
+      <p class="text-sm sm:text-base">
+        © 2025 Sigma Shop. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenuMobile = document.getElementById("nav-menu-mobile");
 
-    navToggle.addEventListener('click', () => {
-      navMenuMobile.classList.toggle('hidden');
-    });
-  </script>
- </body>
+      navToggle.addEventListener("click", () => {
+        navMenuMobile.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>

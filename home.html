@@ -1,232 +1,319 @@
 <html class="scroll-smooth" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Sigma Shop
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Farro&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="Gallery/favicon.ico" rel="icon" type="image/x-icon"/>
-  <style>
-   body {
-      font-family: 'Farro', Helvetica, sans-serif;
-      background-color: #121212;
-    }
-  </style>
- </head>
- <body class="flex flex-col min-h-screen text-white">
-  <!-- Navigation Bar -->
-  <nav class="bg-black sticky top-0 z-50 shadow">
-   <div class="container mx-auto px-4">
-    <div class="flex items-center justify-between h-16">
-     <a class="text-2xl font-bold tracking-wide" href="home.html">
-      Sigma Shop
-      <sup class="text-xs align-top">
-       ™
-      </sup>
-     </a>
-     <div class="lg:hidden">
-      <button aria-label="Toggle navigation" class="focus:outline-none" id="nav-toggle">
-       <i class="fas fa-bars text-white text-2xl">
-       </i>
-      </button>
-     </div>
-     <ul class="hidden lg:flex space-x-8 text-lg font-semibold" id="nav-menu">
-      <li>
-       <a class="hover:text-gray-300 transition" href="#banner">
-        Home
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-gray-300 transition" href="#shop">
-        Shop
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-gray-300 transition" href="teams.html">
-        Teams
-       </a>
-      </li>
-      <li>
-       <a class="hover:text-gray-300 transition" href="news.html">
-        News
-       </a>
-      </li>
-     </ul>
-     <div class="hidden lg:flex space-x-6 text-xl">
-      <a aria-label="Profile" class="hover:text-gray-300 transition" href="profile.html">
-       <i class="fas fa-user">
-       </i>
-      </a>
-      <a aria-label="Cart" class="hover:text-gray-300 transition" href="cart.html">
-       <i class="fas fa-shopping-cart">
-       </i>
-      </a>
-     </div>
-    </div>
-    <!-- Mobile Menu -->
-    <ul class="lg:hidden hidden flex-col space-y-4 pb-4 border-b border-gray-700 mt-2" id="nav-menu-mobile">
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="#banner">
-       Home
-      </a>
-     </li>
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="#shop">
-       Shop
-      </a>
-     </li>
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="teams.html">
-       Teams
-      </a>
-     </li>
-     <li>
-      <a class="block px-2 py-1 hover:text-gray-300 transition" href="news.html">
-       News
-      </a>
-     </li>
-     <li class="flex space-x-6 px-2">
-      <a aria-label="Profile" class="hover:text-gray-300 transition" href="profile.html">
-       <i class="fas fa-user">
-       </i>
-      </a>
-      <a aria-label="Cart" class="hover:text-gray-300 transition" href="cart.html">
-       <i class="fas fa-shopping-cart">
-       </i>
-      </a>
-     </li>
-    </ul>
-   </div>
-  </nav>
-  <!-- Homepage Banner -->
-  <section class="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] flex items-center justify-center overflow-hidden" id="banner">
-   <img alt="A dynamic and modern sportswear banner showing a diverse group of athletes wearing Sigma Shop apparel in an urban environment with vibrant lighting" class="absolute inset-0 w-full h-full object-cover object-center brightness-50" height="1080" src="https://storage.googleapis.com/a1aa/image/be5cf1f9-1973-4e23-b2e0-efc89d7a304f.jpg" width="1920"/>
-   <div class="relative z-10 text-center px-4">
-    <p class="text-lg sm:text-xl md:text-2xl font-semibold tracking-widest mb-2">
-     WELCOME TO
-    </p>
-    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold uppercase leading-tight">
-     HOUSE OF SIGMA
-    </h1>
-   </div>
-  </section>
-  <!-- Featured Products Section -->
-  <section class="py-12 flex-grow" id="shop">
-   <div class="container mx-auto px-4 max-w-7xl">
-    <h2 class="text-center text-3xl sm:text-4xl font-extrabold mb-12">
-     Featured Products
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-     <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group">
-      <img alt="Johor Angels Jersey displayed on a mannequin with vibrant red and white colors, sporty design, and team logo prominently visible" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/062300bb-c8e1-4186-097c-bda4d7ddb6d8.jpg" width="600"/>
-      <div class="p-4">
-       <h3 class="text-xl font-semibold mb-1">
-        Johor Angels Jersey
-       </h3>
-       <p class="text-lg font-bold">
-        RM189.00
-       </p>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Sigma Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Farro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="Gallery/favicon.ico" rel="icon" type="image/x-icon" />
+    <style>
+      body {
+        font-family: "Farro", Helvetica, sans-serif;
+        background-color: #121212;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col min-h-screen text-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-black sticky top-0 z-50 shadow">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <a class="text-2xl font-bold tracking-wide" href="home.html">
+            Sigma Shop
+            <sup class="text-xs align-top"> ™ </sup>
+          </a>
+          <div class="lg:hidden">
+            <button
+              aria-label="Toggle navigation"
+              class="focus:outline-none"
+              id="nav-toggle"
+            >
+              <i class="fas fa-bars text-white text-2xl"> </i>
+            </button>
+          </div>
+          <ul
+            class="hidden lg:flex space-x-8 text-lg font-semibold"
+            id="nav-menu"
+          >
+            <li>
+              <a class="hover:text-gray-300 transition" href="#banner">
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-300 transition" href="#shop"> Shop </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-300 transition" href="teams.html">
+                Teams
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-300 transition" href="news.html">
+                News
+              </a>
+            </li>
+          </ul>
+          <div class="hidden lg:flex space-x-6 text-xl">
+            <a
+              aria-label="Profile"
+              class="hover:text-gray-300 transition"
+              href="profile.html"
+            >
+              <i class="fas fa-user"> </i>
+            </a>
+            <a
+              aria-label="Cart"
+              class="hover:text-gray-300 transition"
+              href="cart.html"
+            >
+              <i class="fas fa-shopping-cart"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <ul
+          class="lg:hidden hidden flex-col space-y-4 pb-4 border-b border-gray-700 mt-2"
+          id="nav-menu-mobile"
+        >
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="#banner"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="#shop"
+            >
+              Shop
+            </a>
+          </li>
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="teams.html"
+            >
+              Teams
+            </a>
+          </li>
+          <li>
+            <a
+              class="block px-2 py-1 hover:text-gray-300 transition"
+              href="news.html"
+            >
+              News
+            </a>
+          </li>
+          <li class="flex space-x-6 px-2">
+            <a
+              aria-label="Profile"
+              class="hover:text-gray-300 transition"
+              href="profile.html"
+            >
+              <i class="fas fa-user"> </i>
+            </a>
+            <a
+              aria-label="Cart"
+              class="hover:text-gray-300 transition"
+              href="cart.html"
+            >
+              <i class="fas fa-shopping-cart"> </i>
+            </a>
+          </li>
+        </ul>
       </div>
-      <a class="absolute top-3 right-3 bg-red-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition" href="item-details.html" title="Buy Now">
-       <i class="fas fa-cart-plus text-xl">
-       </i>
-      </a>
-     </div>
-     <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group">
-      <img alt="Sigma Hoodie in charcoal gray color with front pocket and hood, displayed on a wooden hanger against a dark background" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/8ece3d7d-f6f2-4980-071b-a6b4fb9d5dd7.jpg" width="600"/>
-      <div class="p-4">
-       <h3 class="text-xl font-semibold mb-1">
-        Sigma Hoodie
-       </h3>
-       <p class="text-lg font-bold">
-        RM59.00
-       </p>
+    </nav>
+    <!-- Homepage Banner -->
+    <section
+      class="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] flex items-center justify-center overflow-hidden"
+      id="banner"
+    >
+      <img
+        alt="A dynamic and modern sportswear banner showing a diverse group of athletes wearing Sigma Shop apparel in an urban environment with vibrant lighting"
+        class="absolute inset-0 w-full h-full object-cover object-center brightness-50"
+        height="1080"
+        src="https://storage.googleapis.com/a1aa/image/be5cf1f9-1973-4e23-b2e0-efc89d7a304f.jpg"
+        width="1920"
+      />
+      <div class="relative z-10 text-center px-4">
+        <p
+          class="text-lg sm:text-xl md:text-2xl font-semibold tracking-widest mb-2"
+        >
+          WELCOME TO
+        </p>
+        <h1
+          class="text-4xl sm:text-6xl md:text-7xl font-extrabold uppercase leading-tight"
+        >
+          HOUSE OF SIGMA
+        </h1>
       </div>
-      <a class="absolute top-3 right-3 bg-red-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition" href="item-details.html" title="Buy Now">
-       <i class="fas fa-cart-plus text-xl">
-       </i>
-      </a>
-     </div>
-     <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group">
-      <img alt="Sigma Collared T-Shirt in black with white logo on chest, displayed on a mannequin torso with a clean white background" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/20b3f9f9-0f98-4eaf-efcc-9851a0b700a7.jpg" width="600"/>
-      <div class="p-4">
-       <h3 class="text-xl font-semibold mb-1">
-        Sigma Collared T-Shirt
-       </h3>
-       <p class="text-lg font-bold">
-        RM79.00
-       </p>
+    </section>
+    <!-- Featured Products Section -->
+    <section class="py-12 flex-grow" id="shop">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-center text-3xl sm:text-4xl font-extrabold mb-12">
+          Featured Products
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group"
+          >
+            <img
+              alt="Johor Angels Jersey displayed on a mannequin with vibrant red and white colors, sporty design, and team logo prominently visible"
+              class="w-full h-72 object-cover"
+              height="600"
+              src="https://storage.googleapis.com/a1aa/image/062300bb-c8e1-4186-097c-bda4d7ddb6d8.jpg"
+              width="600"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-1">Johor Angels Jersey</h3>
+              <p class="text-lg font-bold">RM189.00</p>
+            </div>
+            <a
+              class="absolute top-3 right-3 bg-blue-500 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition"
+              href="product-details.html"
+              title="Buy Now"
+            >
+              <i class="fas fa-cart-plus text-xl"> </i>
+            </a>
+          </div>
+          <div
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group"
+          >
+            <img
+              alt="Sigma Hoodie in charcoal gray color with front pocket and hood, displayed on a wooden hanger against a dark background"
+              class="w-full h-72 object-cover"
+              height="600"
+              src="https://storage.googleapis.com/a1aa/image/8ece3d7d-f6f2-4980-071b-a6b4fb9d5dd7.jpg"
+              width="600"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-1">Sigma Hoodie</h3>
+              <p class="text-lg font-bold">RM59.00</p>
+            </div>
+            <a
+              class="absolute top-3 right-3 bg-blue-500 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition"
+              href="product-details.html"
+              title="Buy Now"
+            >
+              <i class="fas fa-cart-plus text-xl"> </i>
+            </a>
+          </div>
+          <div
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group"
+          >
+            <img
+              alt="Sigma Collared T-Shirt in black with white logo on chest, displayed on a mannequin torso with a clean white background"
+              class="w-full h-72 object-cover"
+              height="600"
+              src="https://storage.googleapis.com/a1aa/image/20b3f9f9-0f98-4eaf-efcc-9851a0b700a7.jpg"
+              width="600"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-1">Sigma Collared T-Shirt</h3>
+              <p class="text-lg font-bold">RM79.00</p>
+            </div>
+            <a
+              class="absolute top-3 right-3 bg-blue-500 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition"
+              href="product-details.html"
+              title="Buy Now"
+            >
+              <i class="fas fa-cart-plus text-xl"> </i>
+            </a>
+          </div>
+          <div
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group"
+          >
+            <img
+              alt="Sigma Shorts in dark gray with white stripes on sides, displayed folded on a wooden table with natural light"
+              class="w-full h-72 object-cover"
+              height="600"
+              src="https://storage.googleapis.com/a1aa/image/d616818c-fa23-4068-66bb-5e017de8704a.jpg"
+              width="600"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-1">Sigma Shorts</h3>
+              <p class="text-lg font-bold">RM49.00</p>
+            </div>
+            <a
+              class="absolute top-3 right-3 bg-blue-500 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition"
+              href="product-details.html"
+              title="Buy Now"
+            >
+              <i class="fas fa-cart-plus text-xl"> </i>
+            </a>
+          </div>
+          <div
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group"
+          >
+            <img
+              alt="Sigma Belt in black leather with silver buckle, coiled neatly on a white surface with soft shadows"
+              class="w-full h-72 object-cover"
+              height="600"
+              src="https://storage.googleapis.com/a1aa/image/416ccd83-53c3-4ca1-13db-9127757a3f17.jpg"
+              width="600"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-1">Sigma Belt</h3>
+              <p class="text-lg font-bold">RM39.00</p>
+            </div>
+            <a
+              class="absolute top-3 right-3 bg-blue-500 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition"
+              href="product-details.html"
+              title="Buy Now"
+            >
+              <i class="fas fa-cart-plus text-xl"> </i>
+            </a>
+          </div>
+          <div
+            class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group"
+          >
+            <img
+              alt="Sigma Tie in deep maroon with subtle pattern, displayed rolled on a dark wooden surface with soft lighting"
+              class="w-full h-72 object-cover"
+              height="600"
+              src="https://storage.googleapis.com/a1aa/image/a78ed533-872d-47e7-1820-f0b8ec7d8135.jpg"
+              width="600"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-1">Sigma Tie</h3>
+              <p class="text-lg font-bold">RM29.00</p>
+            </div>
+            <a
+              class="absolute top-3 right-3 bg-blue-500 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition"
+              href="product-details.html"
+              title="Buy Now"
+            >
+              <i class="fas fa-cart-plus text-xl"> </i>
+            </a>
+          </div>
+        </div>
       </div>
-      <a class="absolute top-3 right-3 bg-red-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition" href="item-details.html" title="Buy Now">
-       <i class="fas fa-cart-plus text-xl">
-       </i>
-      </a>
-     </div>
-     <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group">
-      <img alt="Sigma Shorts in dark gray with white stripes on sides, displayed folded on a wooden table with natural light" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/d616818c-fa23-4068-66bb-5e017de8704a.jpg" width="600"/>
-      <div class="p-4">
-       <h3 class="text-xl font-semibold mb-1">
-        Sigma Shorts
-       </h3>
-       <p class="text-lg font-bold">
-        RM49.00
-       </p>
-      </div>
-      <a class="absolute top-3 right-3 bg-red-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition" href="item-details.html" title="Buy Now">
-       <i class="fas fa-cart-plus text-xl">
-       </i>
-      </a>
-     </div>
-     <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group">
-      <img alt="Sigma Belt in black leather with silver buckle, coiled neatly on a white surface with soft shadows" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/416ccd83-53c3-4ca1-13db-9127757a3f17.jpg" width="600"/>
-      <div class="p-4">
-       <h3 class="text-xl font-semibold mb-1">
-        Sigma Belt
-       </h3>
-       <p class="text-lg font-bold">
-        RM39.00
-       </p>
-      </div>
-      <a class="absolute top-3 right-3 bg-red-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition" href="item-details.html" title="Buy Now">
-       <i class="fas fa-cart-plus text-xl">
-       </i>
-      </a>
-     </div>
-     <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg relative group">
-      <img alt="Sigma Tie in deep maroon with subtle pattern, displayed rolled on a dark wooden surface with soft lighting" class="w-full h-72 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/a78ed533-872d-47e7-1820-f0b8ec7d8135.jpg" width="600"/>
-      <div class="p-4">
-       <h3 class="text-xl font-semibold mb-1">
-        Sigma Tie
-       </h3>
-       <p class="text-lg font-bold">
-        RM29.00
-       </p>
-      </div>
-      <a class="absolute top-3 right-3 bg-red-600 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition" href="item-details.html" title="Buy Now">
-       <i class="fas fa-cart-plus text-xl">
-       </i>
-      </a>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-center py-6 mt-auto">
-   <p class="text-sm sm:text-base">
-    © 2025 Sigma Shop. All rights reserved.
-   </p>
-  </footer>
-  <script>
-   const navToggle = document.getElementById('nav-toggle');
-    const navMenuMobile = document.getElementById('nav-menu-mobile');
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-center py-6 mt-auto">
+      <p class="text-sm sm:text-base">
+        © 2025 Sigma Shop. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenuMobile = document.getElementById("nav-menu-mobile");
 
-    navToggle.addEventListener('click', () => {
-      navMenuMobile.classList.toggle('hidden');
-    });
-  </script>
- </body>
+      navToggle.addEventListener("click", () => {
+        navMenuMobile.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
